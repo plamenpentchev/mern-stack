@@ -25,13 +25,20 @@
                 <p className='hw-your-name'>Plamen Pentchev</p>
             </div>
         );
+        
+        const jsxElem2 = (
+            <div key='your-name-2'>
+                <p className='hw-your-name'>Johan Pentchev</p>
+            </div>
+        );
 
         const elem = React.createElement(
             'div', // type
             {title: 'outer div', className: 'hw-title'}, // attributes
             [   //children
                 React.createElement('h1', {key:'title', className:'hw-title'}, 'Hallo React'),
-                jsxElem
+                jsxElem,
+                jsxElem2
             ]
         )
         ReactDOM.render(elem, document.getElementById('content'));
