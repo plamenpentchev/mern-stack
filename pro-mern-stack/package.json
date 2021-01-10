@@ -4,11 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node ./server/server.js",
+    "start-nodemon": "nodemon --watch server -e js server/server.js 3000",
+    "jsx-transform-manually-with-babel": "npx babel public/v3/src --out-dir public/v3 --watch --verbose",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10"
   }
 }
